@@ -11,38 +11,20 @@ namespace snake
         static void Main(string[] args)
         {
             Point p1 = new Point(3,5,'#');
-            p1.Draw();
+           // p1.Draw();
 
             Point p2 = new Point(5, 7,'@');
            // p2.Draw();
 
-            //lists
+            //create horizont line
 
-            List<int> numList = new List<int>();
-            numList.Add(0);
-            numList.Add(1);
+            HorizontalLine hline = new HorizontalLine(0, 50, 1, '+');
+            hline.Drow();
 
-            int l = numList[0];
-            int d = numList[1];
+            //create vertical line
 
-            List<string> strList = new List<string>();
-            strList.Add("first");
-            strList.Add("second");
-
-            string fir = strList[1];
-            string sec = strList[1];
-
-            //Console.WriteLine(fir);
-            //Console.WriteLine(sec);
-
-            List<Point> points = new List<Point>();
-            points.Add(p1);
-            points.Add(p2);
-
-            Point p3 = new Point();
-            p3 = points[1];
-            p3.Draw();
-
+            VerticalLine vline = new VerticalLine(25, 1, 25, '+');
+            vline.Drow();
 
 
             Console.ReadKey();
