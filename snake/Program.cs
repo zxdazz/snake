@@ -12,7 +12,7 @@ namespace snake
         {
             Console.SetWindowSize(1, 1);
             Console.SetWindowSize(80, 25);
-           // Console.SetBufferSize(80, 25);
+           //Console.SetBufferSize(80, 25);
             
 
             // draw lines
@@ -29,8 +29,8 @@ namespace snake
             //points
 
             Point p = new Point(4, 5, '*');
-            p.Draw();
-
+            Snake snake = new Snake(p, 4, Direction.RIGHT);
+            snake.Drow();
 
             Console.ReadKey();
 
